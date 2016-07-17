@@ -1,9 +1,10 @@
-package ipicture.web.pocket.model;
+package com.iyihua.model.ipicture.user;
 
 import java.io.Serializable;
 
+import com.iyihua.model.ipicture.base.FieldExtend;
 
-public class User implements Serializable {
+public class UserDto implements Serializable {
 
 	private static final long serialVersionUID = 127199294326731001L;
 
@@ -20,18 +21,18 @@ public class User implements Serializable {
 	private long userConfigId;
 //	private 
 
-//	private FieldExtend fieldExtend = new FieldExtend();
+	private FieldExtend fieldExtend = new FieldExtend();
 
-	public User() {
+	public UserDto() {
 		super();
 	}
 
-	public User(Long id, String name, Integer type) {
+	public UserDto(Long id, String name, Integer type) {
 		super();
 		this.name = name;
 	}
 	
-	public User(Long id, String name, String password, Integer type, String salt, String email, String mobile, Integer deleted, Integer enable, String code) {
+	public UserDto(Long id, String name, String password, Integer type, String salt, String email, String mobile, Integer deleted, Integer enable, String code, FieldExtend fieldExtend) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -43,6 +44,7 @@ public class User implements Serializable {
 		this.deleted = deleted;
 		this.enable = enable;
 		this.code = code;
+		this.fieldExtend = fieldExtend;
 	}
 
 	public String getName() {
@@ -67,6 +69,13 @@ public class User implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public FieldExtend getFieldExtend() {
+		return fieldExtend;
+	}
+	public void setFieldExtend(FieldExtend fieldExtend) {
+		this.fieldExtend = fieldExtend;
 	}
 
 	public String getPassword() {
@@ -136,7 +145,7 @@ public class User implements Serializable {
 	@Override
 	public String toString() {
 		return "UserDTO [id=" + id + ", name=" + name + ", password=" + password + ", type=" + type + ", salt=" + salt + ", email=" + email + ", mobile=" + mobile + ", deleted=" + deleted
-				+ ", enable=" + enable + ", code=" + code + "]";
+				+ ", enable=" + enable + ", code=" + code + ", fieldExtend=" + fieldExtend + "]";
 	}
 
 }

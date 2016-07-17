@@ -25,18 +25,18 @@ public class UserService {
 //	 @Autowired
 //	 FeignUserService feignUserService;
 	 
-	 final String SERVICE_NAME="service-sample";
+	 final String SERVICE_NAME="ipicture-service-user";
 	 
 	 @HystrixCommand(fallbackMethod = "fallbackSearchAll")
 	 public List<User> readUserInfo() {
-	        return restTemplate.getForObject("http://"+SERVICE_NAME+"/user", List.class);
+	        return restTemplate.getForObject("http://"+SERVICE_NAME+"/users", List.class);
 		 //return feignUserService.readUserInfo();
 	 }	 
 	 private List<User> fallbackSearchAll() {
 		 System.out.println("HystrixCommand fallbackMethod handle!");
 		 List<User> ls = new ArrayList<User>();
 		 User user = new User();
-		 user.setUsername("TestHystrixCommand");
+		 user.setName("TestHystrixCommand");
 		 ls.add(user);
 		 return ls;
 	 }
