@@ -16,6 +16,7 @@
         <module>ipicture-service-post</module>
         <module>ipicture-service-fastdfs-client</module>
         <module>ipicture-web-pocket</module>
+        <module>ipicture-hystrix-turbine</module>
     </modules>
 
 
