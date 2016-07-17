@@ -11,6 +11,7 @@
     <modules>
         <module>ipicture-server-config</module>
         <module>ipicture-server-eureka</module>
+        <module>ipicture-server-monitor</module>
         <module>ipicture-service-user</module>
         <module>ipicture-service-post</module>
         <module>ipicture-service-fastdfs-client</module>
