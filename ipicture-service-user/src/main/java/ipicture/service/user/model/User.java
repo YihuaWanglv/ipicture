@@ -1,6 +1,7 @@
 package ipicture.service.user.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,147 +15,121 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue
-	private Long id;
-
+	private Long uid;
+	@Column(nullable = false)
+	private Integer rid;
 	@Column(nullable = false)
 	private String name;
-
 	@Column(nullable = false)
 	private String password;
-
 	@Column(nullable = false)
 	private Integer type;
-
 	@Column(nullable = false)
 	private String salt;
-
 	@Column(nullable = false)
 	private String email;
-	@Column
+	@Column(nullable = false)
 	private String mobile;
-	@Column()
+	@Column(nullable = false)
 	private Integer deleted;
-	@Column()
+	@Column(nullable = false)
 	private Integer enable;
 	@Column()
 	private String code;
-	@Column
-	private long userConfigId;
+	@Column(nullable = false)
+	private long ucid;
+	@Column(nullable = false)
+	private Date created;
+	@Column()
+	private Date updated;
+	
 	public User() {
 		super();
 	}
-
-	public User(Long id, String name, String password, Integer type) {
-		super();
-		this.name = name;
+	
+	
+	public Long getUid() {
+		return uid;
 	}
-
-	public User(Long id, String name, String password, Integer type, String salt, String email, String mobile, Integer deleted, Integer enable, String code) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.password = password;
-		this.type = type;
-		this.salt = salt;
-		this.email = email;
-		this.mobile = mobile;
-		this.deleted = deleted;
-		this.enable = enable;
-		this.code = code;
+	public void setUid(Long uid) {
+		this.uid = uid;
 	}
-
+	public long getUcid() {
+		return ucid;
+	}
+	public void setUcid(long ucid) {
+		this.ucid = ucid;
+	}
 	public String getName() {
 		return this.name;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public Integer getType() {
 		return type;
 	}
-
 	public void setType(Integer type) {
 		this.type = type;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	public String getSalt() {
 		return salt;
 	}
-
 	public void setSalt(String salt) {
 		this.salt = salt;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public String getMobile() {
 		return mobile;
 	}
-
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-
 	public Integer getDeleted() {
 		return deleted;
 	}
-
 	public void setDeleted(Integer deleted) {
 		this.deleted = deleted;
 	}
-
 	public Integer getEnable() {
 		return enable;
 	}
-
 	public void setEnable(Integer enable) {
 		this.enable = enable;
 	}
-	
 	public String getCode() {
 		return code;
 	}
-
 	public void setCode(String code) {
 		this.code = code;
 	}
-
-	public long getUserConfigId() {
-		return userConfigId;
+	public Integer getRid() {
+		return rid;
 	}
-
-	public void setUserConfigId(long userConfigId) {
-		this.userConfigId = userConfigId;
+	public void setRid(Integer rid) {
+		this.rid = rid;
 	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", type=" + type + ", salt=" + salt + ", email=" + email + ", mobile=" + mobile + ", deleted=" + deleted + ", enable="
-				+ enable + ", code=" + code + "]";
+	public Date getCreated() {
+		return created;
 	}
-
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+	public Date getUpdated() {
+		return updated;
+	}
+	public void setUpdated(Date updated) {
+		this.updated = updated;
+	}
 }
