@@ -37,11 +37,13 @@ public class User implements Serializable {
 	@Column()
 	private String code;
 	@Column(nullable = false)
-	private long ucid;
+	private Long ucid;
 	@Column(nullable = false)
 	private Date created;
 	@Column()
 	private Date updated;
+	@Column()
+	private Integer status;
 	
 	public User() {
 		super();
@@ -54,10 +56,10 @@ public class User implements Serializable {
 	public void setUid(Long uid) {
 		this.uid = uid;
 	}
-	public long getUcid() {
+	public Long getUcid() {
 		return ucid;
 	}
-	public void setUcid(long ucid) {
+	public void setUcid(Long ucid) {
 		this.ucid = ucid;
 	}
 	public String getName() {
@@ -132,4 +134,11 @@ public class User implements Serializable {
 	public void setUpdated(Date updated) {
 		this.updated = updated;
 	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	
 }

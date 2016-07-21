@@ -10,14 +10,16 @@ public class Role {
 
 	@Id
 	@GeneratedValue
-	private int rid;
+	private Integer rid;
 	@Column(nullable = false)
 	private String roleName;
+	@Column(nullable = false)
+	private Integer deleted;
 	
-	public int getRid() {
+	public Integer getRid() {
 		return rid;
 	}
-	public void setRoleId(int rid) {
+	public void setRoleId(Integer rid) {
 		this.rid = rid;
 	}
 	public String getRoleName() {

@@ -1,4 +1,4 @@
-package ipicture.service.user.conf;
+package ipicture.service.post.conf;
 
 import javax.annotation.PreDestroy;
 import javax.sql.DataSource;

@@ -1,8 +1,8 @@
-package ipicture.service.user.dao;
+package ipicture.service.post.dao;
 
 import java.util.List;
 
-import ipicture.service.user.model.Post;
+import ipicture.service.post.model.Post;
 
 
 public interface PostDao {

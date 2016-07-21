@@ -12,14 +12,14 @@ public class UserConfig implements Serializable {
 	
 	@Id
 	@GeneratedValue
-	private long ucid;
+	private Long ucid;
 	@Column()
 	private String detail;
 	
-	public long getUcid() {
+	public Long getUcid() {
 		return ucid;
 	}
-	public void setUcid(long ucid) {
+	public void setUcid(Long ucid) {
 		this.ucid = ucid;
 	}
 	public String getDetail() {

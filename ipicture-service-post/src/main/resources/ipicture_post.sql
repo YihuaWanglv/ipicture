@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50509
 File Encoding         : 65001
 
-Date: 2016-07-21 00:02:45
+Date: 2016-07-21 23:59:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,6 +29,8 @@ CREATE TABLE `post` (
   `updated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `last_updated` datetime DEFAULT NULL,
   `last_updator` bigint(20) DEFAULT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`pid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -47,6 +49,8 @@ CREATE TABLE `post_comment` (
   `creator` bigint(20) NOT NULL DEFAULT '0',
   `updated` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `content` longtext NOT NULL,
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -66,6 +70,8 @@ CREATE TABLE `subject` (
   `type` tinyint(4) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `creator` bigint(20) NOT NULL DEFAULT '0',
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

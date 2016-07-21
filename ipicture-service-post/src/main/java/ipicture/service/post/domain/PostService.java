@@ -1,4 +1,4 @@
-package ipicture.service.user.domain;
+package ipicture.service.post.domain;
 
 
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ipicture.service.user.dao.PostDao;
-import ipicture.service.user.model.Post;
+import ipicture.service.post.dao.PostDao;
+import ipicture.service.post.model.Post;
 
 
 @Service
