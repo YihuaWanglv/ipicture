@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ipicture.service.post.dao.PostDao;
 import ipicture.service.post.model.Post;
+import ipicture.service.post.repository.PostRepository;
 
 
 @Service
@@ -19,8 +20,19 @@ public class PostService {
 	@Autowired
 	private PostDao userMapper;
 	
+	@Autowired private PostRepository postRepository;
+	
 	public List<Post> searchAll(){
 		List<Post> list = userMapper.findAll();
 		return list;
+	}
+	
+	public Post save(Post post) {
+		return postRepository.save(post);
+	}
+	
+	public void delete(Long id) {
+		Post p = postRepository.findOne(id);
+		p.setDeleted(1);
 	}
 }

@@ -8,7 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.DynamicInsert;
+
 @Entity
+@DynamicInsert
 public class Subject implements Serializable {
 
 	private static final long serialVersionUID = 4710862745217098982L;
@@ -32,6 +35,17 @@ public class Subject implements Serializable {
 	private Integer deleted;
 	@Column(nullable = false)
 	private Integer status;
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Subject [sid=" + sid + ", subjectName=" + subjectName + ", descr=" + descr + ", parent_id=" + parent_id
+				+ ", type=" + type + ", created=" + created + ", creator=" + creator + ", deleted=" + deleted
+				+ ", status=" + status + "]";
+	}
 	public Integer getSid() {
 		return sid;
 	}
