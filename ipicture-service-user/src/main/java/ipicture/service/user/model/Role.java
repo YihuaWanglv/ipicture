@@ -28,4 +28,14 @@ public class Role {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
+	public Integer getDeleted() {
+		return deleted;
+	}
+	public void setDeleted(Integer deleted) {
+		this.deleted = deleted;
+	}
+	public void setRid(Integer rid) {
+		this.rid = rid;
+	}
+	
 }

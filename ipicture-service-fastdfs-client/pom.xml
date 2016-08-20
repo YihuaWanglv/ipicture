@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.iyihua.ipicture</groupId>
 	<artifactId>ipicture-service-fastdfs-client</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>ipicture-service-fastdfs-client</name>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -25,7 +25,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

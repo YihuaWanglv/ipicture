@@ -9,6 +9,6 @@ import ipicture.service.user.repository.UserConfigRepository;
 @Service
 public class RoleAndConfigService {
 
-	@Autowired private RoleRepository roleRepository;
-	@Autowired private UserConfigRepository userConfigRepository;
+//	@Autowired private RoleRepository roleRepository;
+//	@Autowired private UserConfigRepository userConfigRepository;
 }

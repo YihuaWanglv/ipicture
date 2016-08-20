@@ -10,5 +10,4 @@ import ipicture.service.user.model.User;
 
 public interface RoleRepository extends CrudRepository<Role, Integer> {
 
-	User findByName(String name);
 }
