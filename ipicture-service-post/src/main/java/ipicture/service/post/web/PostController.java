@@ -15,12 +15,12 @@ import ipicture.service.post.model.JsonObject;
 import ipicture.service.post.model.Post;
 
 @RestController
-@RequestMapping("/post")
+//@RequestMapping("/")
 public class PostController {
 
 	@Autowired private PostService postService;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/post", method = RequestMethod.GET)
 	public String hello() {
 		return "hello!";
 	}
