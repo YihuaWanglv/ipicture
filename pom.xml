@@ -19,6 +19,7 @@
         <module>hystrix-example</module>
         <module>hystrix-dashboard</module>
         <module>hystrix-turbine</module>
+        <module>ipicture-bus-client</module>
     </modules>
 
     <parent>
