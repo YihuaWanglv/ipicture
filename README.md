@@ -1,7 +1,7 @@
 # ipicture
 ipicture
 
-## 项目目标是试用spring  cloud全套东西去实现一个i微服务的picture图片平台
+## 项目目标是试用spring  cloud全套东西去实现一个微服务的ipicture图片平台
 
 ## 模块开发日志
 
@@ -33,16 +33,14 @@ bus所用配置在config-repo文件夹下的config-bus-dev.properties
 
 - 启动busClient ipicture-bus-client
 
-- 访问http://localhost:8087/show
-得到
+- 访问http://localhost:8087/show 得到
 ```
 hello! testValue=2
 ```
 
 - 修改config-bus-dev.properties中的test.value=3
 
-- 再次访问http://localhost:8087/show
-依然得到
+- 再次访问http://localhost:8087/show, 依然得到
 ```
 hello! testValue=2
 ```
@@ -56,5 +54,5 @@ curl -X POST http://localhost:8087/bus/refresh
 - 再次访问http://localhost:8087/show
 发现配置修改生效，得到结果
 ```
-hello! testValue=2
+hello! testValue=3
 ```
